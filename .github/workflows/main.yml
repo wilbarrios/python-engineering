@@ -17,9 +17,11 @@ jobs:
         run: cd ci_cd/calculator_project
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install flake8 pytest
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          cd ci_cd/calculator_project && python3 -m venv venv
+          . venv/bin/activate
+          pip install -r requirements.txt
       - name: Test with pytest
         run: |
-          pytest
+          cd ci_cd/calculator_project && . venv/bin/activate
+          pytest -v --cov=calculator
+
