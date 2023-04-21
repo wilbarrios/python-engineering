@@ -12,3 +12,4 @@ scrapy library
 ## Notes
 
 - `/spiders` is where you put your actual code
+- `Spider` all spiders must inherit from this class
