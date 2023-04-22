@@ -7,3 +7,7 @@ https://www.oreilly.com/library/view/web-scraping-with/9781491985564/
 - BeautifulSoup 4 library (also known as BS4)
   - https://www.crummy.com/software/BeautifulSoup/bs4/doc/
     - `pip install beautifulsoup4`
+- lmxl
+  - `pip install lmxl`
+- html5lib
+  - `pip install html5lib` // Check
