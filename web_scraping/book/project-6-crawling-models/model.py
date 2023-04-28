@@ -2,10 +2,25 @@ import requests
 from bs4 import BeautifulSoup
 
 class Content:
+  """
+  Common class for articles/blogs
+  """
+
   def __init__(self, url, title, body):
     self.url = url
     self.title = title
     self.body = body
+
+  def print(self):
+    """
+    Flexible printing functions controls output
+    """
+    print(
+      """URL: {}
+      Title: {}
+      Body: {}
+      """.format(self.url, self.title, self.body)
+    )
 
 def get_page(url):
   req = requests.get(url)
@@ -32,4 +47,4 @@ def scrape_brookings(url):
 url = 'https://www.brookings.edu/blog/future-development/2018/01/26/delivering-inclusive-urban-access-3-uncomfortable-truths/'
 content = scrape_brookings(url)
 
-print('Title:\n{}\nURL:\n{}\nBody:\n{}'.format(content.title, content.url, content.body))
+content.print()
