@@ -1,4 +1,4 @@
-from helpers import sample
+from utils import sample
 
 def rfile():
   hello_file = open('hello.txt')
